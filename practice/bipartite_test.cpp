@@ -27,17 +27,17 @@ bool dfs(ll node, int c){
 
 
 int main(){
-	// #ifndef ONLINE_JUDGE
-	// freopen("/home/naman/CP/practice/input.txt", "r", stdin);
-	// freopen("/home/naman/CP/practice/output.txt", "w", stdout);
-	// #endif
+	#ifndef ONLINE_JUDGE
+	freopen("/home/naman/CP/practice/input.txt", "r", stdin);
+	freopen("/home/naman/CP/practice/output.txt", "w", stdout);
+	#endif
 	ll t;
 	cin>>t;
 	for(ll tc=1;tc<=t;tc++){
 
 		ll n,m,a,b;
 		cin>>n>>m;
-		for(ll i=1;i<n;i++) arr[i].clear(), visited[i]=0;
+		for(ll i=0;i<=n;i++) arr[i].clear(), visited[i]=0;
 
 		for(ll i=0;i<m;i++){
 			cin>>a>>b;
@@ -54,7 +54,7 @@ int main(){
 			}
 
 		}
-		cout<<"Scenario #"<<tc<<"\n";
+		cout<<"Scenario #"<<tc<<":\n";
 
 		if(flag==false){
 			cout<<"Suspicious bugs found!"<<"\n";
